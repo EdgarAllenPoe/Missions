@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Tom Stout @ SIM USA</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
@@ -13,29 +13,61 @@
       background-color: #f9f9f9;
       color: #333;
     }
-    header {
-      background: #005073;
-      color: white;
-      padding: 2rem;
-      text-align: center;
+
+    .hero-container {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
     }
+
+    .hero-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+    }
+
+    .hero-text h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    .hero-text p {
+      margin: 0.5rem 0 0;
+      font-size: 1.2rem;
+    }
+
     section {
       padding: 2rem;
       max-width: 800px;
       margin: auto;
     }
-    h1, h2 {
+
+    h2 {
       margin-bottom: 0.5rem;
     }
+
     p {
       line-height: 1.6;
     }
+
     .support {
       background-color: #eef6f8;
       padding: 2rem;
       margin-top: 2rem;
       border-radius: 8px;
     }
+
     .button {
       display: inline-block;
       margin-top: 1rem;
@@ -45,22 +77,17 @@
       text-decoration: none;
       border-radius: 4px;
     }
-    img.hero {
-      width: 100%;
-      height: auto;
-      max-height: 400px;
-      object-fit: cover;
-      border-bottom: 6px solid #005073;
-    }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Tom Stout @ SIM USA</h1>
-    <p>Equipping God's People for His Mission</p>
-  </header>
 
-  <img class="hero" src="https://picsum.photos/1800/200" alt="Tom Stout - SIM USA" />
+  <div class="hero-container">
+    <img src="https://picsum.photos/1800/400" alt="SIM USA">
+    <div class="hero-text">
+      <h1>Tom Stout @ SIM USA</h1>
+      <p>Equipping God's People for His Mission</p>
+    </div>
+  </div>
 
   <section>
     <h2>Our Mission</h2>
@@ -73,5 +100,6 @@
       <a class="button" href="https://www.amazon.com/?tag=your-affiliate-id" target="_blank">Shop on Amazon</a>
     </div>
   </section>
+
 </body>
 </html>
